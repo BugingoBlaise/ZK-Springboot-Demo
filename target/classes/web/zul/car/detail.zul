@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zk xmlns:w="client">
+    <?page title="Car Detail"?>
+    <style src="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"/>
+
+    <window title="Car" border="normal" apply="org.zkoss.bind.BindComposer"
+            viewModel="@id('vm') @init('org.zkoss.zkspringboot.demo.car.CarDetailVM')" sclass="p-6">
+        <vlayout spacing="sm">
+            <hlayout>
+                <label value="Make" sclass="w-32"/>
+                <textbox value="@bind(vm.car.make)" width="300px"/>
+            </hlayout>
+            <hlayout>
+                <label value="Model" sclass="w-32"/>
+                <textbox value="@bind(vm.car.model)" width="300px"/>
+            </hlayout>
+            <hlayout>
+                <label value="Year" sclass="w-32"/>
+                <intbox value="@bind(vm.car.year)" width="150px"/>
+            </hlayout>
+            <hlayout>
+                <label value="Price" sclass="w-32"/>
+                <decimalbox value="@bind(vm.car.price)" format="#,##0.00" width="150px"/>
+            </hlayout>
+
+            <hlayout sclass="mt-4">
+                <button label="Save" onClick="@command('save')" sclass="zk-btn"/>
+                <button label="Cancel" onClick="@command('cancel')" sclass="zk-btn ml-2"/>
+            </hlayout>
+        </vlayout>
+    </window>
+</zk>

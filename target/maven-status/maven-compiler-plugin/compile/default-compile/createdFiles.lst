@@ -1,0 +1,6 @@
+org\zkoss\zkspringboot\demo\car\CarListVM.class
+org\zkoss\zkspringboot\demo\car\Car.class
+org\zkoss\zkspringboot\demo\MinimalApplication.class
+org\zkoss\zkspringboot\demo\car\CarDetailVM.class
+org\zkoss\zkspringboot\demo\car\CarRepository.class
+org\zkoss\zkspringboot\demo\car\CarService.class
